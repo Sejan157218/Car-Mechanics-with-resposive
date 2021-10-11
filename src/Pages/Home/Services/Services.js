@@ -12,7 +12,10 @@ const Services = () => {
     },[])
 
     return (
-        <div className="services-container">
+        <div>
+            <h1 className="text-danger my-5">Our Services</h1>
+            <div className="services-container">
+            
           {
               services.map(service=>
                 
@@ -20,6 +23,8 @@ const Services = () => {
                 )
           } 
         </div>
+        </div>
+        
     );
 };
 

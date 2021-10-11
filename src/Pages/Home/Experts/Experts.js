@@ -30,11 +30,13 @@ const Experts = () => {
         },
     ]
     return (
-        <div className="row my-5">
-            <h1 className="mb-5">Our Experts</h1>
+        <div className="container">
+            <div className="row gy-5">
+            <h1 className="text-danger">Our Experts</h1>
             {
                 experts.map(expert=><Expert key={expert.name} expert={expert}></Expert>)
             }
+        </div>
         </div>
     );
 };
