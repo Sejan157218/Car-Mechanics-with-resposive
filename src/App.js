@@ -7,6 +7,7 @@ import Booking from './Pages/Booking/Booking';
 import Login from './Pages/Login/Login/Login';
 import Header from './Pages/Share/Header/Header';
 import AuthProvider from './Contexts/AuthProvider';
+import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 function App() {
   return (
     <div className="App">
@@ -20,9 +21,9 @@ function App() {
          <Route path="/home">
            <Home></Home>
          </Route>
-         <Route path="/booking/:bookinID">
+         <PrivateRoute path="/booking/:bookinID">
            <Booking></Booking>
-         </Route>
+         </PrivateRoute>
          <Route path="/login">
            <Login></Login>
          </Route>

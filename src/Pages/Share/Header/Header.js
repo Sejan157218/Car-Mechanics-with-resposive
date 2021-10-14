@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
+import { HashLink } from 'react-router-hash-link';
 
 
 const Header = () => {
@@ -10,12 +11,12 @@ const Header = () => {
     <>
       <Navbar bg="dark" variant="dark" sticky="top" collapseOnSelect expand="lg">
         <Container>
-          <Navbar.Brand href="#home">Car Doctor</Navbar.Brand>
+          <Navbar.Brand href="/home">Car Doctor</Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
-            <Nav.Link as={Link} to="/home">Home</Nav.Link>
-            <Nav.Link as={Link} to="/home#services">Services</Nav.Link>
-            <Nav.Link as={Link} to="/home#experts">Experts</Nav.Link>
+            <Nav.Link as={HashLink } to="/home#home">Home</Nav.Link>
+            <Nav.Link as={HashLink } to="/home#services">Services</Nav.Link>
+            <Nav.Link as={HashLink } to="/home#experts">Experts</Nav.Link>
             {user?.email ? 
               <Button onClick={logOut} variant="secondary">Log Out</Button>
             :
